@@ -45,10 +45,8 @@ with results as
        from inventory
            ,date_dim
            ,item
-           ,warehouse
        where  inv_date_sk=d_date_sk
               and inv_item_sk=i_item_sk
-              and inv_warehouse_sk = w_warehouse_sk
               and d_month_seq between [DMS] and [DMS] + 11
 ),
 results_rollup as 
